@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ign2jnlmqg7p"]
+[gd_scene load_steps=3 format=3 uid="uid://ign2jnlmqg7p"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_2tmop"]
+[ext_resource type="Script" path="res://addons/godot-playfab/PlayFabEvent.gd" id="2_fwsbt"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -60,6 +61,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Reset"
+
+[node name="PlayFabEvent" type="Node" parent="."]
+script = ExtResource("2_fwsbt")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CatsVBox/CatsButton" to="." method="_on_cats_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/DogsVBox/DogsButton" to="." method="_on_dogs_button_pressed"]
