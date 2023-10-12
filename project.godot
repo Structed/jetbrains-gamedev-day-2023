@@ -15,18 +15,6 @@ run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-PlayFabManager="*res://addons/godot-playfab/PlayFabManager.gd"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot-playfab/plugin.cfg")
-
-[playfab]
-
-title_id="544D3"
-
 [rendering]
 
 renderer/rendering_method="mobile"
