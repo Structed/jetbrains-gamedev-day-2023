@@ -12,11 +12,11 @@ func _ready():
 
 func _on_api_error(api_error_wrapper: ApiErrorWrapper):
 	print_debug("API ERROR!" + api_error_wrapper.errorMessage)
-	
-	
+
+
 func _on_server_error(_api_error_wrapper):
 	print_debug("Server ERROR!")
-	
+
 
 func _on_login(_login_result: LoginResult):
 	%LoginStatusLabel.text = "Logged in"
@@ -26,7 +26,7 @@ func _on_login(_login_result: LoginResult):
 func _on_cats_button_pressed():
 	cat_count += 1
 	%CatCountLabel.text = str(cat_count)
-	send_event("cat", cat_count)	
+	send_event("cat", cat_count)
 
 
 func _on_dogs_button_pressed():
@@ -38,7 +38,7 @@ func _on_dogs_button_pressed():
 func _on_reset_button_pressed():
 	cat_count = 0
 	dog_count = 0
-	
+
 	%CatCountLabel.text = str(cat_count)
 	%DogsCountLabel.text = str(dog_count)
 
@@ -48,8 +48,8 @@ func send_event(animal: String, count: int):
 		animal : count,
 	}
 	var event_name = "animal_vote"
-	
-	$PlayFabEvent.write_title_player_playstream_event(event_name, payload, func(response): print_debug("Event sent"))
-	
 
-	
+	$PlayFabEvent.write_title_player_playstream_event(event_name, payload, func(response): print_debug("Event sent"))
+
+
+
